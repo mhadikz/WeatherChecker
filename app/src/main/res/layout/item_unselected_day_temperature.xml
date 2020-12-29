@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sat"
-        android:textColor="@color/text_color_dark_mode"
+        android:textColor="@color/text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@+id/txtTemperatureNumber"
             android:text="°C"
-            android:textColor="@color/text_color_dark_mode"
+            android:textColor="@color/text_color"
             android:textSize="14sp" />
 
         <TextView
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="17"
-            android:textColor="@color/text_color_dark_mode"
+            android:textColor="@color/text_color"
             android:textSize="16sp" />
 
     </RelativeLayout>

@@ -9,21 +9,18 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="background_color_dark_mode">#25294A</color>
-    <color name="text_color_dark_mode">#E9EBF9</color>
-    <color name="icon_color_dark_mode">#E9EBF9</color>
-
-    <color name="background_color_light_mode">#E9EBF9</color>
-    <color name="text_color_light_mode">#25294A</color>
+    <color name="background_color">#E9EBF9</color>
+    <color name="text_color">#25294A</color>
+    <color name="icon_color">#25294A</color>
 
     //Unselected card
-    <color name="unselected_card_background">#2D325A</color>
-    <color name="unselected_card_border">#3C4168</color>
-    <color name="unselected_card_inner_circle">#2A2E53</color>
+    <color name="unselected_card_background">#d9ddf5</color>
+    <color name="unselected_card_border">#a9b3e9</color>
+    <color name="unselected_card_inner_circle">#d1d6f3</color>
 
     //Selected card
-    <color name="selected_card_background">#F65164</color>
-    <color name="selected_card_border">#F86576</color>
-    <color name="selected_card_inner_circle">#F86576</color>
-
+    <color name="selected_card_background">#f2fbf1</color>
+    <color name="selected_card_border">#c1edb9</color>
+    <color name="selected_card_inner_circle">#e4f7e1</color>
+    ebf9e9
 </resources>
