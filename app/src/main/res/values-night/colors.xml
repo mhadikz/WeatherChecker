@@ -23,4 +23,7 @@
     <color name="selected_card_border">#F86576</color>
     <color name="selected_card_inner_circle">#F86576</color>
 
+    <color name="indicator">#F65164</color>
+    <color name="text_indicator">#F65164</color>
+
 </resources>

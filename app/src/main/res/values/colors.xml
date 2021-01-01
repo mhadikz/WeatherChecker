@@ -22,5 +22,8 @@
     <color name="selected_card_background">#f2fbf1</color>
     <color name="selected_card_border">#c1edb9</color>
     <color name="selected_card_inner_circle">#e4f7e1</color>
-    ebf9e9
+
+    <color name="indicator">#25294A</color>
+    <color name="text_indicator">#25294A</color>
+
 </resources>
