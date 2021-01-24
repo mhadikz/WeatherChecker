@@ -1,4 +1,4 @@
-package com.mhadikz.weatherchecker.view.fragment
+package com.mhadikz.weatherchecker.view.viewModel
 
 import androidx.lifecycle.ViewModel
 

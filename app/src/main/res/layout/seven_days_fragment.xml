@@ -6,7 +6,7 @@
 
         <variable
             name="todayFragment"
-            type="com.mhadikz.weatherchecker.view.fragment.SevenDaysViewModel" />
+            type="com.mhadikz.weatherchecker.view.viewModel.SevenDaysViewModel" />
     </data>
 
     <RelativeLayout xmlns:tools="http://schemas.android.com/tools"

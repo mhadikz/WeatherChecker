@@ -2,6 +2,8 @@ package com.mhadikz.weatherchecker.view.fragment
 
 import com.mhadikz.weatherchecker.R
 import com.mhadikz.weatherchecker.databinding.TomorrowFragmentBinding
+import com.mhadikz.weatherchecker.view.base.BaseFragment
+import com.mhadikz.weatherchecker.view.viewModel.TomorrowViewModel
 
 class TomorrowFragment : BaseFragment<TomorrowViewModel, TomorrowFragmentBinding>() {
 

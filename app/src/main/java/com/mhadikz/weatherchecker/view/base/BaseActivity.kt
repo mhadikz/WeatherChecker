@@ -1,4 +1,4 @@
-package com.mhadikz.weatherchecker.view.activity
+package com.mhadikz.weatherchecker.view.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +20,7 @@ abstract class BaseActivity<V: ViewModel?,
         }
         initBinding()
         initComponents()
+        initObservers()
     }
 
     abstract fun setViewModelClass(): Class<V>

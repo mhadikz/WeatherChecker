@@ -1,4 +1,4 @@
-package com.mhadikz.weatherchecker.view.fragment
+package com.mhadikz.weatherchecker.view.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
