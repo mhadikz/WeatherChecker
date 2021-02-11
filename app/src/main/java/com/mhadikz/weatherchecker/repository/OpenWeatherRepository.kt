@@ -1,9 +1,13 @@
 package com.mhadikz.weatherchecker.repository
 
-import com.mhadikz.weatherchecker.api.ApiHelper
+import com.mhadikz.weatherchecker.api.ApiService
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class OpenWeatherRepository (private val apiHelper: ApiHelper){
+@Singleton
+class OpenWeatherRepository @Inject constructor(private val apiService : ApiService){
 
-    suspend fun getCityWeather(cityName: String, apiKey: String) = apiHelper.getCityWeather(cityName, apiKey)
+    suspend fun getCityWeather(cityName: String, apiKey: String) =
+        apiService.getCityWeather(cityName, apiKey)
 
 }
