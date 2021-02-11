@@ -1,13 +1,16 @@
 package com.mhadikz.weatherchecker.api
 
-import com.mhadikz.weatherchecker.model.CityWeather
+import com.mhadikz.weatherchecker.model.ForecastWeatherData
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 
 interface ApiService {
 
-    @GET("weather")
-    suspend fun getCityWeather(@Query("q") cityName: String, @Query("appid") apiKey: String): CityWeather
+    @GET("onecall")
+    suspend fun getForecastWeatherData(@Query("lat") latitude: String,
+                                       @Query("lon") longitude: String,
+                                       @Query("exclude") exclude: String,
+                                       @Query("appid") apiKey: String): ForecastWeatherData
 
 }
