@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="cityWeather"
-            type="com.mhadikz.weatherchecker.model.CityWeather" />
+            name="forecastWeatherData"
+            type="com.mhadikz.weatherchecker.model.ForecastWeatherData" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -102,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@{cityWeather.name, default=Berlin}"
+        android:text="@{forecastWeatherData.timezone, default=Berlin}"
         android:textColor="@color/text_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

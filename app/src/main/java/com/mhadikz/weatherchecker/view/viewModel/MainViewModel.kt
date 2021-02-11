@@ -1,6 +1,5 @@
 package com.mhadikz.weatherchecker.view.viewModel
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.mhadikz.weatherchecker.repository.OpenWeatherRepository
 import com.mhadikz.weatherchecker.util.Resource
@@ -14,10 +13,10 @@ class MainViewModel @Inject constructor () : BaseViewModel(){
     @Inject
     lateinit var repository: OpenWeatherRepository
 
-    fun currentWeather(cityName: String, apiKey: String) = liveData(Dispatchers.IO) {
+    fun currentWeather(latitude: String, longitude: String) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = repository.getCityWeather(cityName, apiKey)))
+            emit(Resource.success(data = repository.getForecastWeatherData(latitude, longitude)))
         } catch (exception: Exception) {
             emit(Resource.error(data = null, msg = exception.message ?: "Error Occurred!"))
         }

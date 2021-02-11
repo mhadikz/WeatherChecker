@@ -7,7 +7,18 @@ import javax.inject.Singleton
 @Singleton
 class OpenWeatherRepository @Inject constructor(private val apiService : ApiService){
 
-    suspend fun getCityWeather(cityName: String, apiKey: String) =
-        apiService.getCityWeather(cityName, apiKey)
+    private var apiKey: String
+    private var exclude: String
+
+    init {
+        exclude = "minutely"
+        apiKey = ""
+    }
+
+    suspend fun getForecastWeatherData(latitude: String, longitude: String) =
+        apiService.getForecastWeatherData(latitude,
+            longitude,
+            exclude,
+            apiKey)
 
 }
