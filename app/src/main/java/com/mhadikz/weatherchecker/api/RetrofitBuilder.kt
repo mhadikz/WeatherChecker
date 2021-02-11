@@ -19,7 +19,7 @@ object RetrofitBuilder {
         .addInterceptor(interceptor)
         .build()
 
-    private fun getRetrofit(): Retrofit {
+    fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)
