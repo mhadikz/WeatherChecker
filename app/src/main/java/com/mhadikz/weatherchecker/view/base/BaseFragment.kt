@@ -9,10 +9,11 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import javax.inject.Inject
 
-abstract class BaseFragment <V: ViewModel?, D: ViewDataBinding?> : Fragment() {
+abstract class BaseFragment <V: ViewModel, D: ViewDataBinding?> : Fragment() {
 
-    open var viewModel: V? = null
+    @Inject lateinit var viewModel: V
     open var binding: D? = null
 
 
@@ -26,13 +27,15 @@ abstract class BaseFragment <V: ViewModel?, D: ViewDataBinding?> : Fragment() {
             initViewModel(factory, setViewModelClass())
         }
         initBinding(inflater, container)
+        initComponents()
+        initObservers()
         return binding?.root
     }
 
+    abstract fun setViewModelClass(): Class<V>
     private fun initViewModel(factory: ViewModelProvider.Factory, viewModelClass: Class<V>) {
         viewModel = ViewModelProvider(this, factory).get(viewModelClass)
     }
-    abstract fun setViewModelClass(): Class<V>
 
     private fun initBinding(inflater: LayoutInflater, container: ViewGroup?) {
         binding = DataBindingUtil.inflate<D>(inflater, layoutId(), container, false)

@@ -6,11 +6,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import javax.inject.Inject
 
-abstract class BaseActivity<V: ViewModel?,
+abstract class BaseActivity<V: ViewModel,
         D: ViewDataBinding?> : AppCompatActivity() {
 
-    open var viewModel: V? = null
+    @Inject lateinit var viewModel: V
     open var binding: D? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +25,8 @@ abstract class BaseActivity<V: ViewModel?,
     }
 
     abstract fun setViewModelClass(): Class<V>
-    private fun initViewModel(factory: ViewModelProvider.Factory, vmClass: Class<V>) {
-        viewModel = ViewModelProvider(this, factory).get(vmClass)
+    private fun initViewModel(factory: ViewModelProvider.Factory, viewModelClass: Class<V>) {
+        viewModel = ViewModelProvider(this, factory).get(viewModelClass)
     }
     private fun initBinding() {
         binding = DataBindingUtil.setContentView<D>(this, layoutId())
