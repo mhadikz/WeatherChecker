@@ -26,4 +26,7 @@
     <color name="indicator">#F65164</color>
     <color name="text_indicator">#F65164</color>
 
+    <color name="button">#E9EBF9</color>
+    <color name="button_text">#25294A</color>
+
 </resources>
