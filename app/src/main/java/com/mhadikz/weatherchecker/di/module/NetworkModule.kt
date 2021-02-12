@@ -52,7 +52,7 @@ class NetworkModule {
     }
 
     companion object {
-        private const val NETWORK_CALL_TIMEOUT = 10L
+        private const val NETWORK_CALL_TIMEOUT = 20L
     }
 
 }

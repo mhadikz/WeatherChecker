@@ -1,11 +1,12 @@
 package com.mhadikz.weatherchecker.repository
 
 import com.mhadikz.weatherchecker.api.ApiService
+import com.mhadikz.weatherchecker.model.ForecastWeatherData
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class OpenWeatherRepository @Inject constructor(private val apiService : ApiService){
+class OpenWeatherRepository @Inject constructor(private val apiService: ApiService) {
 
     private var apiKey: String
     private var exclude: String
@@ -15,10 +16,12 @@ class OpenWeatherRepository @Inject constructor(private val apiService : ApiServ
         apiKey = ""
     }
 
-    suspend fun getForecastWeatherData(latitude: String, longitude: String) =
-        apiService.getForecastWeatherData(latitude,
+    suspend fun getForecastWeatherData(latitude: String, longitude: String):
+            ForecastWeatherData =
+        apiService.getForecastWeatherData(
+            latitude,
             longitude,
             exclude,
-            apiKey)
-
+            apiKey
+        )
 }
